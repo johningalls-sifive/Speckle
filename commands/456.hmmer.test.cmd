@@ -1,1 +1,1 @@
---fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 bombesin.hmm
+--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 $SPEC_DIR/benchspec/CPU2006/456.hmmer/data/test/input/bombesin.hmm

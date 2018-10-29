@@ -1,2 +1,2 @@
--s1 -e -m45000 pds-50.mps
--m3500 ref.mps
+-s1 -e -m45000 $SPEC_DIR/benchspec/CPU2006/450.soplex/data/ref/input/pds-50.mps
+-m3500 $SPEC_DIR/benchspec/CPU2006/450.soplex/data/ref/input/ref.mps

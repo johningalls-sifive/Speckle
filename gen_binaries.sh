@@ -13,7 +13,7 @@ fi
 
 CONFIG=riscv
 CONFIGFILE=${CONFIG}.cfg
-RUN="spike pk -c "
+RUN="spike pk"
 CMD_FILE=commands.txt
 INPUT_TYPE=test
 
@@ -84,6 +84,7 @@ if [ "$compileFlag" = true ]; then
          SHORT_EXE=Xalan #WTF SPEC???
       fi
       BMK_DIR=$SPEC_DIR/benchspec/CPU2006/$b/run/run_base_${INPUT_TYPE}_${CONFIG}.0000;
+      mkdir -p $BMK_DIR
       
       echo ""
       echo "ls $SPEC_DIR/benchspec/CPU2006/$b/run"
@@ -129,6 +130,8 @@ if [ "$runFlag" = true ]; then
       # handle benchmarks that don't conform to the naming convention
       if [ $b == "482.sphinx3" ]; then SHORT_EXE=sphinx_livepretend; fi
       if [ $b == "483.xalancbmk" ]; then SHORT_EXE=Xalan; fi
+
+      EXE_PATH=$SPEC_DIR/benchspec/CPU2006/$b/exe/$SHORT_EXE
       
       # read the command file
       IFS=$'\n' read -d '' -r -a commands < $BUILD_DIR/../commands/${b}.${INPUT_TYPE}.cmd
@@ -136,8 +139,8 @@ if [ "$runFlag" = true ]; then
       for input in "${commands[@]}"; do
          if [[ ${input:0:1} != '#' ]]; then # allow us to comment out lines in the cmd files
             echo "~~~Running ${b}"
-            echo "  ${RUN} ${SHORT_EXE}_base.${CONFIG} ${input}"
-            eval ${RUN} ${SHORT_EXE}_base.${CONFIG} ${input}
+            echo "  ${RUN} ${EXE_PATH}_base.${CONFIG} ${input}"
+            eval ${RUN} ${EXE_PATH}_base.${CONFIG} ${input}
          fi
       done
    

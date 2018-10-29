@@ -1,1 +1,1 @@
--v test.xml xalanc.xsl
+-v $SPEC_DIR/benchspec/CPU2006/483.xalancbmk/data/test/input/test.xml $SPEC_DIR/benchspec/CPU2006/483.xalancbmk/data/test/input/xalanc.xsl

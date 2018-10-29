@@ -1,1 +1,1 @@
--m10000 test.mps
+-m10000 $SPEC_DIR/benchspec/CPU2006/450.soplex/data/test/input/test.mps

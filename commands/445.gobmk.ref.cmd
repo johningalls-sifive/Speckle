@@ -1,5 +1,5 @@
---quiet --mode gtp < 13x13.tst
---quiet --mode gtp < nngs.tst
---quiet --mode gtp < score2.tst
---quiet --mode gtp < trevorc.tst
---quiet --mode gtp < trevord.tst
+--quiet --mode gtp < $SPEC_DIR/benchspec/CPU2006/445.gobmk/data/ref/input/13x13.tst
+--quiet --mode gtp < $SPEC_DIR/benchspec/CPU2006/445.gobmk/data/ref/input/nngs.tst
+--quiet --mode gtp < $SPEC_DIR/benchspec/CPU2006/445.gobmk/data/ref/input/score2.tst
+--quiet --mode gtp < $SPEC_DIR/benchspec/CPU2006/445.gobmk/data/ref/input/trevorc.tst
+--quiet --mode gtp < $SPEC_DIR/benchspec/CPU2006/445.gobmk/data/ref/input/trevord.tst

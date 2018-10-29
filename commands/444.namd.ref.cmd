@@ -1,1 +1,1 @@
---input namd.input --iterations 38 --output namd.out
+--input $SPEC_DIR/benchspec/CPU2006/444.namd/data/all/input/namd.input --iterations 38 --output namd.out

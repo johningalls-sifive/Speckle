@@ -1,8 +1,8 @@
--I. -I./lib attrs.pl
--I. -I./lib gv.pl
--I. -I./lib makerand.pl
--I. -I./lib pack.pl
--I. -I./lib redef.pl
--I. -I./lib ref.pl
--I. -I./lib regmesg.pl
--I. -I./lib test.pl
+-I. -I./lib $SPEC_DIR/benchspec/CPU2006/400.perlbench/data/test/input/attrs.pl
+-I. -I./lib $SPEC_DIR/benchspec/CPU2006/400.perlbench/data/test/input/gv.pl
+-I. -I./lib $SPEC_DIR/benchspec/CPU2006/400.perlbench/data/test/input/makerand.pl
+-I. -I./lib $SPEC_DIR/benchspec/CPU2006/400.perlbench/data/test/input/pack.pl
+-I. -I./lib $SPEC_DIR/benchspec/CPU2006/400.perlbench/data/test/input/redef.pl
+-I. -I./lib $SPEC_DIR/benchspec/CPU2006/400.perlbench/data/test/input/ref.pl
+-I. -I./lib $SPEC_DIR/benchspec/CPU2006/400.perlbench/data/test/input/regmesg.pl
+-I. -I./lib $SPEC_DIR/benchspec/CPU2006/400.perlbench/data/test/input/test.pl
