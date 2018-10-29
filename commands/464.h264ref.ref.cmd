@@ -1,3 +1,3 @@
--d $SPEC_DIR/benchspec/CPU2006/464.h264ref/data/ref/input/foreman_ref_encoder_baseline.cfg
--d $SPEC_DIR/benchspec/CPU2006/464.h264ref/data/ref/input/foreman_ref_encoder_main.cfg
--d $SPEC_DIR/benchspec/CPU2006/464.h264ref/data/ref/input/sss_encoder_main.cfg
+-d $SPEC_DIR/benchspec/CPU2006/464.h264ref/data/ref/input/foreman_ref_encoder_baseline.cfg -p InputFile="$SPEC_DIR/benchspec/CPU2006/464.h264ref/data/all/input/foreman_qcif.yuv"
+-d $SPEC_DIR/benchspec/CPU2006/464.h264ref/data/ref/input/foreman_ref_encoder_main.cfg -p InputFile="$SPEC_DIR/benchspec/CPU2006/464.h264ref/data/all/input/foreman_qcif.yuv"
+-d $SPEC_DIR/benchspec/CPU2006/464.h264ref/data/ref/input/sss_encoder_main.cfg -p InputFile="$SPEC_DIR/benchspec/CPU2006/464.h264ref/data/ref/input/sss.yuv"
