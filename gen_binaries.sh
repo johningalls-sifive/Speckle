@@ -79,7 +79,7 @@ if [ "$compileFlag" = true ]; then
    # assume the CPU2006 directories are clean. I've hard-coded the directories I'm going to copy out of
    for b in ${BENCHMARKS[@]}; do
       if [ $b == "445.gobmk" ]; then
-        sed -i "s/loadsgf /&$SPEC_DIR\/benchspec\/CPU2006\/445.gobmk\/data\/all\/input\//" $SPEC_DIR/benchspec/CPU2006/445.gobmk/data/*/input/*.tst
+        sed -i "s%loadsgf %&$SPEC_DIR/benchspec/CPU2006/445.gobmk/data/all/input/%" $SPEC_DIR/benchspec/CPU2006/445.gobmk/data/*/input/*.tst
       fi
 
       echo ${b}
