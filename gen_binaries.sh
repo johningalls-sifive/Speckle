@@ -78,6 +78,10 @@ if [ "$compileFlag" = true ]; then
    # Do this for each input type.
    # assume the CPU2006 directories are clean. I've hard-coded the directories I'm going to copy out of
    for b in ${BENCHMARKS[@]}; do
+      if [ $b == "445.gobmk" ]; then
+        sed -i "s/loadsgf /&$SPEC_DIR\/benchspec\/CPU2006\/445.gobmk\/data\/all\/input\//" $SPEC_DIR/benchspec/CPU2006/445.gobmk/data/*/input/*.tst
+      fi
+
       echo ${b}
       SHORT_EXE=${b##*.} # cut off the numbers ###.short_exe
       if [ $b == "483.xalancbmk" ]; then 
@@ -138,6 +142,7 @@ if [ "$runFlag" = true ]; then
 
       for input in "${commands[@]}"; do
          if [[ ${input:0:1} != '#' ]]; then # allow us to comment out lines in the cmd files
+            echo ""
             echo "~~~Running ${b}"
             echo "  ${RUN} ${EXE_PATH}_base.${CONFIG} ${input}"
             eval ${RUN} ${EXE_PATH}_base.${CONFIG} ${input}
